@@ -37,5 +37,6 @@ This project simulates live race telemetry and visualizes it using an interactiv
 ---
 
 ## 📊 Dashboard Preview
+![Dashboard Preview](screenshots/image.png)
 
 
