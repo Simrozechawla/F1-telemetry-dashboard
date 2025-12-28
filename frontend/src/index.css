@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Racing HUD Enhancements ===== */
+
+body {
+  background-color: #000;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Neon glow helpers */
+.glow-green {
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
+}
+
+.glow-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.7);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 15px rgba(234, 179, 8, 0.7);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.25s ease-in-out;
+}
+
+/* ===== F1 HUD GLOWS ===== */
+.glow-green {
+  box-shadow: 0 0 20px rgba(34,197,94,0.9),
+              0 0 40px rgba(34,197,94,0.6);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 20px rgba(234,179,8,0.9),
+              0 0 40px rgba(234,179,8,0.6);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(239,68,68,0.9),
+              0 0 40px rgba(239,68,68,0.6);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+.line-glow {
+  filter: drop-shadow(0 0 10px rgba(34,197,94,0.8))
+          drop-shadow(0 0 20px rgba(34,197,94,0.6));
+}
+
