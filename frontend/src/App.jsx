@@ -56,14 +56,18 @@ export default function App() {
       ? "#eab308"
       : "#ef4444";
 
-  const behaviorLabel =
-    telemetry.driver_behavior === "AGGRESSIVE"
-      ? "🔥 AGGRESSIVE"
-      : telemetry.driver_behavior === "SMOOTH"
-      ? "🟢 SMOOTH"
-      : telemetry.driver_behavior === "CONSERVATIVE"
-      ? "🟡 CONSERVATIVE"
-      : "🔴 ERRATIC";
+  // --- DRIVER BEHAVIOR DISPLAY MAPPING (SAFE) ---
+  const behaviorLabelMap = {
+  SMOOTH: "🟢 SMOOTH OPERATOR",
+  AGGRESSIVE: "🔥 AGGRESSIVE",
+  CONSERVATIVE: "🟡 CONSERVATIVE",
+  ERRATIC: "🔴 ERRATIC"
+};
+
+const behaviorLabel =
+  behaviorLabelMap[telemetry.driver_behavior] ||
+  telemetry.driver_behavior;
+
 
   return (
     <div
